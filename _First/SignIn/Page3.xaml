@@ -1,0 +1,45 @@
+﻿<Page x:Class="_First.SignIn.Page3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_First.SignIn"
+      mc:Ignorable="d"
+      Loaded="Page_Loaded"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BaseInfo">
+
+    <Grid x:Name="BaseInfo" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Button Height="20" 
+                Width="100"
+                HorizontalAlignment="Left"
+                Margin="10"
+                Click="Click_ButtonBack"
+                Content="Back">
+        </Button>
+        <Button Height="20" 
+                Width="100"
+                HorizontalAlignment="Right"
+                Margin="10"
+                Click="Click_ButtonExit"
+                Content="Exit">
+        </Button>
+        <DataGrid Grid.Row="1"
+                  x:Name="UsersGrid"
+                  AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="*" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="LastName" Width="*" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Age" Width="*" Binding="{Binding Age}"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+
+    </Grid>
+</Page>
